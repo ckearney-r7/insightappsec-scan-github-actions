@@ -1,0 +1,15 @@
+name: IAS Scan test
+on:
+  push:
+    branches: [ master ]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - id: scan-test
+        uses: rapid7/insightappsec-scan-github-actions@v1.0.0
+        with:
+          region: us
+          api-key: ${{ secrets.IAS_API_KEY }}
+          scan-config-id: '187a1863-8f1a-4a85-92a6-14d41613deb3'
+      - run: echo '${{ steps.scan-test.outputs.scan-findings }}'
