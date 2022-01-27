@@ -12,5 +12,5 @@ jobs:
           region: us
           api-key: ${{ secrets.IAS_API_KEY }}
           scan-config-id: '187a1863-8f1a-4a85-92a6-14d41613deb3'
-          vuln-query: vulnerability.severity = 'MEDIUM'
+          vuln-query: 'vulnerability.vulnerabilityScore > 4'
       - run: echo '${{ steps.scan-test.outputs.scan-findings }}'
