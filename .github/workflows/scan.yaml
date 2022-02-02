@@ -15,5 +15,5 @@ jobs:
           # vuln-query: "vulnerability.severity = 'MEDIUM'"
           # scan-timeout-mins: 1
       - name: Upload findings
-        if: always()
+        # if: always()
         run: echo "${{ steps.my-scan.outputs.scan-findings }}"
