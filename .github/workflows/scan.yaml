@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: scan-test
-        uses: rapid7/insightappsec-scan-github-actions@v1.2.0
+        uses: ckearney-r7/insightappsec-scan-github-actions@v1.2.0
         with:
           region: us
           api-key: ${{ secrets.IAS_API_KEY }}
