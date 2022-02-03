@@ -19,6 +19,7 @@ jobs:
         run: echo "${{ steps.my-scan.outputs.scan-findings }}"
   deploy:
     runs-on: ubuntu-latest
+    needs: [scan]
     steps:
       - name: Deploy artifact
         run: echo "Deploying..."
