@@ -1,7 +1,7 @@
 name: IAS Scan test
 on:
   push:
-    branches: [ master ]
+    branches: [ DF-4192 ]
 jobs:
   scan:
     runs-on: ubuntu-latest
