@@ -6,7 +6,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - id: scan-test
+      - id: my-scan
         uses: ckearney-r7/insightappsec-scan-github-actions@v1.3.0
         with:
           region: us
